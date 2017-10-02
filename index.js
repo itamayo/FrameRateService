@@ -21,7 +21,7 @@ function getMediaInfo(filePath) {
 }
 
 getMediaInfo('http://localhost/vicomtech.mp4').then(function(file){
- dd  console.log(Math.round(file.file.track[0].frameRate));
+  console.log(Math.round(file.file.track[0].frameRate));
 }).catch(function(e){
 console.log(e);
 });
