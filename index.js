@@ -25,4 +25,4 @@ getMediaInfo('http://localhost/vicomtech.mp4').then(function(file){
 }).catch(function(e){
 console.log(e);
 });
-]
+}
