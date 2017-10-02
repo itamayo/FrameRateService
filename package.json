@@ -15,6 +15,7 @@
     "url": "git://github.com/itamayo/frameRateService.git"
   },
   "main":"index.js",
+  "bin":"./bin/run.js",
   "keywords": [
     "video",
     "frames",
