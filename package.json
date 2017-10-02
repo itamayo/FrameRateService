@@ -1,5 +1,5 @@
 {
-  "name": "FrameRateService",
+  "name": "framerate-service",
   "description": "Get video frame Rate by webservice",
   "version": "0.0.1",
   "author": [
@@ -27,5 +27,8 @@
     "mediainfo": "git://github.com/itamayo/node-mediainfo.git",
     "mediainfo-parser": "^1.1.5",
     "express": "latest"
+  },
+  "scripts": {
+    "preinstall": "apt-get install media-info"
   }
 }
