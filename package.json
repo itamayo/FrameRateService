@@ -24,11 +24,8 @@
     "node": ">= 0.10.0"
   },
   "dependencies": {
+    "express": "latest",
     "mediainfo": "git://github.com/itamayo/node-mediainfo.git",
-    "mediainfo-parser": "^1.1.5",
-    "express": "latest"
-  },
-  "scripts": {
-    "preinstall": "apt-get install media-info"
+    "mediainfo-parser": "git://github.com/itamayo/node-mediainfo-parser.git"
   }
 }
