@@ -3,11 +3,17 @@ const app = express()
 
 exports.run = function(){
 app.get('/getFrameRate', function (req, res) {
-  res.send('Hello World!'+req.query.test);
+  getMediaInfo(req.query.path).then(function(file){
+  res.send("{\"framerate\":"+Math.round(file.file.track[0].frameRate)+"}");
+}).catch(function(e){
+   res.send('error');
+
+});
+
 })
 
 app.listen(3500, function () {
-  console.log('Example app listening on port 3000!')
+  console.log('FrameRateService listening on port 3000!')
 });
 
 var  mediainfo = require('mediainfo-parser');
@@ -20,9 +26,4 @@ function getMediaInfo(filePath) {
   });
 }
 
-getMediaInfo('http://localhost/vicomtech.mp4').then(function(file){
-  console.log(Math.round(file.file.track[0].frameRate));
-}).catch(function(e){
-console.log(e);
-});
 }
