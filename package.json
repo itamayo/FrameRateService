@@ -1,0 +1,31 @@
+{
+  "name": "FrameRateService",
+  "description": "Get video frame Rate by webservice",
+  "version": "0.0.1",
+  "author": [
+    {
+      "name": "iñigo tamayo",
+      "email": "tamaxx@gmail.com"
+    }
+  ],
+  "url": "https://github.com/itamayo/frameRateService.git",
+  "license": "BSD",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/itamayo/frameRateService.git"
+  },
+  "keywords": [
+    "video",
+    "frames",
+    "h264",
+    "mp4"
+  ],
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "dependencies": {
+    "mediainfo": "git://github.com/itamayo/node-mediainfo.git",
+    "mediainfo-parser": "^1.1.5",
+    "express": "latest"
+  }
+}
