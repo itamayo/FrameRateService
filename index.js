@@ -18,7 +18,7 @@ app.get('/getFrameRate', function (req, res) {
 })
 
 app.listen(3500, function () {
-  console.log('FrameRateService listening on port 3000!')
+  console.log('FrameRateService listening on port 3500!')
 });
 
 var  mediainfo = require('mediainfo-parser');
