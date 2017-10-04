@@ -2,6 +2,11 @@ const express = require('express')
 const app = express()
 
 exports.run = function(){
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 app.get('/getFrameRate', function (req, res) {
   getMediaInfo(req.query.path).then(function(file){
   res.send("{\"framerate\":"+Math.round(file.file.track[0].frameRate)+"}");
