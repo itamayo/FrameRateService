@@ -9,9 +9,9 @@ app.use(function(req, res, next) {
 });
 app.get('/getFrameRate', function (req, res) {
   getMediaInfo(req.query.path).then(function(file){
-  res.send("{\"framerate\":"+Math.round(file.file.track[0].frameRate)+"}");
+    res.send("{\"framerate\":"+Math.round(file.media.track[0].framerate)+"}");
 }).catch(function(e){
-   res.send('error');
+   res.send('{"error":"error"}');
 
 });
 
