@@ -1,7 +1,7 @@
 # FrameRateService
 npm install -g framerate-service
 
-sudo npm install -g framete-service
+sudo npm install -g framerate-service
 
 # use
 framerate-service
