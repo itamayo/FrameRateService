@@ -8,8 +8,12 @@ app.use(function(req, res, next) {
   next();
 });
 app.get('/getFrameRate', function (req, res) {
-  getMediaInfo(req.query.path).then(function(file){
-    res.send("{\"framerate\":"+Math.round(file.media.track[0].framerate)+"}");
+  getMediaInfo(req.query.path).then(function(file){ 
+    if (file.media)
+	    res.send("{\"framerate\":"+Math.round(file.media.track[0].framerate)+"}");
+    else 
+           res.send("{\"framerate\":"+Math.round(file.file.track[0].frameRate)+"}");
+
 }).catch(function(e){
    res.send('{"error":"error"}');
 
